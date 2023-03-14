@@ -1,0 +1,42 @@
+.email-verify-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hue-black);
+    text-align: center;
+}
+
+.email-verify-inner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.email-verify-inner h1 i{
+    color: var(--hue-light-blue);
+    font-size: 8.3rem;
+}
+
+.email-verify-inner p{
+    font-size: 1.5rem;
+    color: var(--hue-white);
+}
+
+.email-verify-link{
+    width: 200px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 200;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.email-verify-link:hover{
+    scale: 1.05;
+}

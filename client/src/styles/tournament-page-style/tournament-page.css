@@ -1,0 +1,99 @@
+.tournament-content-container{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(43, 46, 60);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tournament-content-container::after{
+    content: "";
+    position: fixed;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background: rgba(0, 0, 0, 0.189);
+    pointer-events: none;
+}
+
+.tournament-content-container i{
+    font-size: 10rem;
+    color:rgb(34, 36, 46);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.to-be-small.active{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.to-be-small.active i{
+    font-size: 2rem;
+    color: white;
+    z-index: 100;
+}
+
+.to-be-small.active i:hover{
+    scale: 1.02;
+}
+
+#tournament-theme{
+    display: none;
+}
+
+.tournament-details{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 100;
+}
+
+.tournament-details h1, .players-and-team-count p{
+    color: var(--hue-white);
+}
+
+.tournament-details p, .tournament-link p{
+    color: rgb(255, 255, 255);
+}
+
+.players-and-team-count{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    z-index: 100;
+}
+
+.tournament-link{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    z-index: 100;
+}
+
+.tournament-link button{
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.441);
+    backdrop-filter: blur(10px);
+    border: none;
+    color: rgb(220, 214, 214);
+}
+
+.tournament-link button:hover{
+    color: white;
+    scale: 1.02;
+    cursor: pointer;
+}

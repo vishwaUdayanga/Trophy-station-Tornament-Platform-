@@ -1,0 +1,342 @@
+.sign-up-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--hue-white);
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.left.active{
+    transform: translateX(-100%);
+    z-index: 100;
+}
+
+.right.active{
+    transform: translateX(-100%);
+}
+
+.sign-in-up-page-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    text-align: center;
+    margin-top: 100px;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-up-form{
+    z-index: 100;
+}
+
+.sign-up-form.active{
+    opacity: 0;
+    z-index: 0;
+}
+
+.sign-in-form{
+    opacity: 0;
+}
+
+.sign-in-form.active{
+    opacity: 1;
+    z-index: 100;
+}
+
+.sign-in-up-page-form-container h1{
+    color: var(--hue-dark-blue);
+}
+
+.sign-in-up-page-form-container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sign-in-up-page-form-container form input{
+    padding: 10px 5px;
+    background-color: transparent;
+    color: var(--hue-black);
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #696b6b;
+}
+
+.sign-in-up-page-form-container form input:focus{
+    outline: none;
+}
+
+.sign-in-up-page-form-container form button{
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--hue-black);
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sign-in-up-page-form-container form p{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.sign-in-up-page-form-container form h4{
+    color: var(--hue-black);
+    font-weight: 700;
+}
+
+.sign-in-up-page-form-container form div{
+    width: 100%;
+    text-align: left;
+}
+
+.upper-content{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+}
+
+.sign-up-description, .sign-in-description{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-content, .sign-in-content{
+    margin-top: 100px;
+    transition: all 0.6s ease-in-out;
+    z-index: 10;
+}
+
+.sign-up-content.active{
+    transform: translateX(-40%);
+    opacity: 0;
+}
+
+.sign-in-content{
+    transform: translateX(40%);
+    opacity: 0;
+}
+
+.sign-in-content.active{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.sign-up-section .button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-container button{
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px solid var(--hue-white);
+    color: var(--hue-white);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.upper-content h1{
+    color: var(--hue-white);
+    height: 45px;
+    padding-left: 10px;
+    border-left: 8px solid var(--hue-light-blue);
+}
+
+.upper-content h4{
+    color: var(--hue-white);
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.steps-container{
+    margin-top: 50px;
+}
+
+.upper-content .steps-container p{
+    display: flex;
+    gap: 20px;
+    color: var(--hue-white);
+    margin: 20px;
+}
+
+.upper-content .steps-container p .numbers{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hue-black);
+    border-radius: 50%;
+    background-color: var(--hue-light-blue);
+}
+
+.animated-square{
+    width: 50%;
+    background-color: var(--hue-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.animated-square.active{
+    transform: translateX(100%);
+}
+
+.mountain{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.rock1{
+    position: absolute;
+    bottom: 110px;
+    left: 70px;
+    width: 200px;
+    animation: add-anim 3s infinite;
+}
+
+.rock-container{
+    position: absolute;
+    bottom: 110px;
+    left: 500px;
+    height: 200px;
+    display: flex;
+}
+
+.rock-container img{
+    width: 100px;
+    height: 100px;
+}
+
+.rock2,
+.rock3,
+.rock4,
+.rock5,
+.rock6{
+    position: absolute;
+    animation: add-anim 3s infinite;
+}
+
+.rock2{
+    bottom: 10px;
+}
+
+.rock3{
+    bottom: -40px;
+    left: 100px;
+    animation-delay: 0.5s;
+}
+
+.rock4{
+    left: 120px;
+    bottom: 30px;
+    animation-delay: 1s;
+}
+
+.rock5{
+    left: 460px;
+    bottom: 70px;
+}
+
+.rock6{
+    left: 500px;
+    bottom: 150px;
+    animation-delay: 0.5s;
+}
+
+.notification-container{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.notification{
+    z-index: 100;
+    position: relative;
+    width: fit-content;
+    padding: 0px 70px;
+    height: 50px;
+    background-color: rgb(146, 19, 236);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    line-height: 20px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(100%);
+    color: var(--hue-white);
+    animation: notify 0.3s linear forwards;
+}
+
+.notification i{
+    font-size: 20px;
+}
+
+.notification::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    right: 0;
+    animation: reduceWidth 5s linear forwards;
+    background-color: var(--hue-white);
+}
+
+@keyframes reduceWidth {
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes notify {
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes add-anim {
+    50%{
+        transform: translateY(3px);
+        
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
